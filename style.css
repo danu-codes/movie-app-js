@@ -53,6 +53,20 @@
     cursor: pointer;
 }
 
+.category-container{
+    background-color: #ecf0f1;
+    width: 100%;
+}
+
+.section-container{
+    background-color: #ecf0f1;
+    width: 100%;
+}
+
+.category-title{
+    padding: 15px 0px 0px 100px;
+}
+
 .movie-container{
     background-color: #ecf0f1;
     width: 100%;
@@ -104,17 +118,24 @@
 
 @media (max-width:600px){
     .movie-container{
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        padding-bottom: 10px;
     }
 
     .search-box{
         width: 70%;
     }
 
+    .movie-card{
+        min-width: 200px;        
+        flex-shrink: 0;
+    }
+
     .searched-movie-container{
         flex-direction: column;
         align-items: center;
     }
-
 }
